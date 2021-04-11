@@ -26,7 +26,7 @@ Open the desired web browser and go to the page url for either the Repo or the D
 
 A portfolio is a gathering of completed and in progress works, that are used to showcase a skilled person's end results and/or work styles.
 
-![Screenshot](https://user-images.githubusercontent.com/77466708/113634919-43ceee00-9635-11eb-9d05-1905f4e8e8b8.png)
+![Screenshot](IMG URL)
 
 
 ## Credits
