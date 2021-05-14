@@ -52,7 +52,10 @@ var lon = -97.7431;
 var currentWeatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 var fiveDayForecastApi = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 var oneCallApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units={imperial}`
+var today = moment().format('L');
+var searchHistoryList = [];
 var currentWeatherContainer = document.getElementById('currentWeatherCard');
+var fiveDayContainer = document.getElementById('fiveDayCard');
 var cityList = document.querySelector('ul');
 var searchButton = document.getElementById('search-button');
 var searchInput = document.getElementById('search-input')
@@ -64,7 +67,6 @@ document.getElementById('search-button').value
 // city list
 function cityList() {
 }
-
 
 
 // current weather card  
@@ -102,6 +104,7 @@ function currentWeather() {
           // Append will attach the element as the bottom most child.
           currentWeatherContainer.append(cityName);
           currentWeatherContainer.append(currentDate);
+          currentWeatherContainer.append(icon);
           currentWeatherContainer.append(temperature);
           currentWeatherContainer.append(humidity);
           currentWeatherContainer.append(windSpeed);
@@ -122,41 +125,8 @@ searchButton.addEventListener('click', function(){
   console.log('test');
   var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   console.log(requestUrl);
-
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-        //Using console.log to examine the data
-        console.log(data);
-        for (var i = 0; i < data.length; i++) {
-          //Creating elements
-          var cityName = document.createElement('h3');
-          var currentDate = document.createElement('h3');
-          var icon = document.createElement('');
-          var temperature = document.createElement('p', {is : 'temp'});
-          var humidity = document.createElement('p', {is : 'humid'});
-          var windSpeed = document.createElement('p', {is : 'wind'});
-          var uvIndex = document.createElement('p', {is : 'uv'});
-
-          //Setting the text of elements
-          cityName.textContent = data[i].city;
-          currentDate.textContent = data[i].date;
-          icon.textContent = data[i].icon;
-          temperature.textContent = data[i].temp;
-          humidity.textContent = data[i].humid;
-          windSpeed.textContent = data[i].wind;
-          uvIndex.textContent = data[i].uv;
-
-          //Appending the dynamically generated html to the div associated with the id="_"
-          // //Append will attach the element as the bottom most child.
-          // usersContainer.append(userName);
-          // usersContainer.append(userUrl);
-        }
-    })
 });
-    
+
 
 // 5-day forecast cards
 //card 1        
@@ -174,28 +144,74 @@ function fiveDay() {
           //Creating elements
           var currentDate = document.createElement('h6');
           var icon = document.createElement('');
-          var temperature = document.createElement('');
-          var humidity = document.createElement('');
+          var temperature = document.createElement('p');
+          var humidity = document.createElement('p');
 
           //Setting the text of elements
-          // currentDate.textContent = data[i]. ? ;
-          // icon.textContent = data[i]. ? ;
-          // temperature.textContent = data[i]. ? ;
-          // humidity.textContent = data[i]. ? ;
+          currentDate.textContent = data[i].current.dt;
+          icon.textContent = data[i].weather.icon;
+          temperature.textContent = data[i].current.temp;
+          humidity.textContent = data[i].current.humidity;
 
-          // //Appending the dynamically generated html to the div associated with the id="_"
-          // //Append will attach the element as the bottom most child.
-          // usersContainer.append(userName);
-          // usersContainer.append(userUrl);
+          // Appending the dynamically generated html to the div associated with the id="_"
+          // Append will attach the element as the bottom most child.
+          currentWeatherContainer.append(currentDate);
+          currentWeatherContainer.append(icon);
+          currentWeatherContainer.append(temperature);
+          currentWeatherContainer.append(humidity);
+
         }
     })
 };
       
 function initialize() {
-  CurrentWeather();
+  currentWeather();
   fiveDay();
 };
 
+
+
+
+
+//   fetch(requestUrl)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (data) {
+//         //Using console.log to examine the data
+//         console.log(data);
+//         for (var i = 0; i < data.length; i++) {
+//           //Creating elements
+//           var cityName = document.createElement('h3');
+//           var currentDate = document.createElement('h3');
+//           var icon = document.createElement('');
+//           var temperature = document.createElement('p');
+//           var humidity = document.createElement('p');
+//           var windSpeed = document.createElement('p');
+//           var uvIndex = document.createElement('p');
+
+//           //Setting the text of elements
+//           cityName.textContent = data[i].name;
+//           currentDate.textContent = data[i].current.dt;
+//           icon.textContent = data[i].weather.icon;
+//           temperature.textContent = data[i].current.temp;
+//           humidity.textContent = data[i].current.humidity;
+//           windSpeed.textContent = data[i].current.wind_speed;
+//           uvIndex.textContent = data[i].uvi
+
+//           // Appending the dynamically generated html to the div associated with the id="_"
+//           // Append will attach the element as the bottom most child.
+//           currentWeatherContainer.append(cityName);
+//           currentWeatherContainer.append(currentDate);
+//           currentWeatherContainer.append(icon);
+//           currentWeatherContainer.append(temperature);
+//           currentWeatherContainer.append(humidity);
+//           currentWeatherContainer.append(windSpeed);
+//           currentWeatherContainer.append(uvIndex);
+//         }
+//     })
+// });
+    
 
 //Pulls previous searches 
 // function allStorage() {
