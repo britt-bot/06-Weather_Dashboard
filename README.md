@@ -1,7 +1,7 @@
 # 06-Weather_Dashboard
 ## Description 
 
-ENTER DESCRIPTION HERE
+
 
 ## Table of Contents 
 
@@ -17,21 +17,21 @@ This table of contents is to make it easy for users to find what they need.
 
 Open the desired web browser and go to the page url for either the Repo or the Deployed project.
 
-[Homework 06 - Weather Dashboard Repo](https://github.com/britt-bot/06-Weather_Dashboard)
+[Homework 06 - Weather Dashboard Github Repo](https://github.com/britt-bot/06-Weather_Dashboard)
 
-[Homework 06 - Weather Dashboard Deployed](https://britt-bot.github.io/06-Weather_Dashboard/)
+[Homework 06 - Weather Dashboard Github Deploy](https://britt-bot.github.io/06-Weather_Dashboard/)
 
 
 ## Usage 
 
 A portfolio is a gathering of completed and in progress works, that are used to showcase a skilled person's end results and/or work styles.
 
-![Screenshot](IMG URL)
+![scrnshot](https://user-images.githubusercontent.com/77466708/133945138-78529193-c1b7-4026-a1d1-a17dad9a4c4a.png)
 
 
 ## Credits
 
-ENTER CREDITS HERE
+[OpenWeather API](https://openweathermap.org/api)
 
 
 ## License
