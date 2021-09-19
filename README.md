@@ -1,7 +1,8 @@
+![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 # 06-Weather_Dashboard
 ## Description 
 
-
+This weather dashboard is used to search and display weather for cities based on user input/search.
 
 ## Table of Contents 
 
@@ -24,7 +25,7 @@ Open the desired web browser and go to the page url for either the Repo or the D
 
 ## Usage 
 
-A portfolio is a gathering of completed and in progress works, that are used to showcase a skilled person's end results and/or work styles.
+This app is used to view/track current weather.
 
 ![scrnshot](https://user-images.githubusercontent.com/77466708/133945138-78529193-c1b7-4026-a1d1-a17dad9a4c4a.png)
 
