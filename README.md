@@ -1,5 +1,5 @@
 ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-# 06-Weather_Dashboard
+# Weather_Dashboard
 ## Description 
 
 This weather dashboard is used to search and display weather for cities based on user input/search.
@@ -18,9 +18,9 @@ This table of contents is to make it easy for users to find what they need.
 
 Open the desired web browser and go to the page url for either the Repo or the Deployed project.
 
-[Weather Dashboard Github Repo](https://github.com/britt-bot/06-Weather_Dashboard)
+[Weather Dashboard Repo](https://github.com/britt-bot/06-Weather_Dashboard)
 
-[Weather Dashboard Github Deploy](https://britt-bot.github.io/06-Weather_Dashboard/)
+[Weather Dashboard Deploy](https://britt-bot.github.io/06-Weather_Dashboard/)
 
 
 ## Usage 
