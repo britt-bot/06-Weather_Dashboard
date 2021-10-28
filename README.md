@@ -18,9 +18,9 @@ This table of contents is to make it easy for users to find what they need.
 
 Open the desired web browser and go to the page url for either the Repo or the Deployed project.
 
-[Weather Dashboard Repo](https://github.com/britt-bot/06-Weather_Dashboard)
+[Weather Dashboard Repo](https://github.com/britt-bot/Weather_Dashboard)
 
-[Weather Dashboard Deploy](https://britt-bot.github.io/06-Weather_Dashboard/)
+[Weather Dashboard Deploy](https://britt-bot.github.io/Weather_Dashboard)
 
 
 ## Usage 
